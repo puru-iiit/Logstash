@@ -1,0 +1,9 @@
+#Way to create single pipeline for each conf file so that no out of order delivery of log
+#####logstash pipelines setting#######
+- pipeline.id: app_gc
+  pipeline.workers: 1
+  path.config: "./config/app_gc.conf"
+
+- pipeline.id: application
+  pipeline.workers: 1
+  path.config: "./config/application.conf"
